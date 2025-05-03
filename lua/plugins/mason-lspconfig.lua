@@ -2,7 +2,6 @@ local opts = {
     ensure_installed = {
         "clangd",
     },
-
     automatic_installation = true,
 }
 
@@ -12,3 +11,4 @@ return {
     event = "BufReadPre",
     dependencies = "williamboman/mason.nvim",
 }
+

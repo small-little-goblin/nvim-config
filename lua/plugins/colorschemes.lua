@@ -1,7 +1,7 @@
 return {
     {"EdenEast/nightfox.nvim"},
     {"bluz71/vim-moonfly-colors"},
-    {"/lu-ren/SerialExperimentsLain"},
+    {"lu-ren/SerialExperimentsLain"},
     {"folke/tokyonight.nvim",
     lazy = false,
     priority = 999,

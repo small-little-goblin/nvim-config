@@ -28,29 +28,10 @@ vim.o.completeopt = 'menuone,noselect'
 vim.opt.hidden = true
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undofile = true
 vim.o.mouse = 'a'
 vim.o.updatetime = 250
 vim.o.timeoutlen = 300
 vim.o.splitright = true
 vim.o.splitbelow = true
-
--- Add :ToggleBG
-local state_bg = false
-function toggleBG()
-    if state_bg == false then
-        -- Set background to None and remember the previous value
-        --vim.cmd("hi Normal guibg=None ctermbg=None") -- I think this does the same thing as the next 2 lines
-        vim.api.nvim_set_hl(0, "Normal", {bg = "none"})
-        vim.api.nvim_set_hl(0, "NormalFloat", {bg = "none"})
-        vim.api.nvim_command("hi LineNr guifg=#ABB2BF")
-        state_bg = true
-    else
-        vim.cmd('colorscheme ' .. vim.g.colors_name)       
-        state_bg = false
-    end
-end
-vim.cmd("command! ToggleBG lua toggleBG()")
-vim.cmd([[autocmd BufReadPost * lua toggleBG()]]) -- Autostarts ToggleBG when file is opened
 
 

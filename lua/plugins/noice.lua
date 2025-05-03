@@ -1,4 +1,3 @@
-
 return {
   "folke/noice.nvim",
   event = "VeryLazy",
@@ -34,3 +33,4 @@ return {
         })
     end,
     }
+
