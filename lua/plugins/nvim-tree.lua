@@ -1,15 +1,8 @@
 return {
-    "nvim-tree/nvim-tree.lua",
-    lazy = false,
-    config = function()
-        require("nvim-tree").setup({
-			filters = {
-				dotfiles = false,
-			},
-			view = {
-				adaptive_size = true,
-			},
-		})
-	end,
+  "nvim-tree/nvim-tree.lua",
+  dependencies = { "nvim-tree/nvim-web-devicons" },
+  config = function()
+    require("nvim-tree").setup({})
+    vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle file explorer" })
+  end,
 }
-
